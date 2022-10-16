@@ -107,7 +107,29 @@ h2 {
     justify-content: center;
     flex-direction: column;
     border-bottom: solid 3px var(--backgroundcolor);
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
 }
+
+.main1::before {
+    content: '';
+    background: var(--backgroundcolor);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(25deg);
+    transition: 0.6s all ease;
+    width: 120%;
+    height: 0%;
+    z-index: -1;
+}
+
+.main1:hover::before {
+    height: 180%;
+    opacity: 10%;
+}
+
 
 .main2 {
     grid-column-start: 2;
@@ -117,5 +139,56 @@ h2 {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
 }
 
+.main2::before {
+    content: '';
+    background: var(--backgroundcolor);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    transition: 0.6s all ease;
+    width: 120%;
+    height: 0%;
+    z-index: -1;
+}
+
+.main2:hover::before {
+    height: 180%;
+    opacity: 10%;
+}
+
+
+.column1 h2 {
+    position: relative;
+    border: 1px solid var(--backgroundcolor2);
+    overflow: hidden;
+    transition: 1s all ease;
+    z-index: 1;
+    padding: 0.5rem;
+}
+
+.column1 h2:hover {
+    color: var(--backgroundcolor);
+}
+
+.column1 h2::before {
+    content: '';
+    background: var(--backgroundcolor2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.6s all ease;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+}
+
+.column1 h2:hover::before {
+    width: 100%;
+}
