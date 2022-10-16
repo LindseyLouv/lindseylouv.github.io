@@ -82,10 +82,36 @@ h2 {
     grid-column-start: 2;
     grid-column-end: 4;
     display: flex;
-    justify-content: space-evenly;
     flex-direction: column;
-    color: var(--backgroundcolor2);
+    justify-content: space-evenly;
+    color: var(--backgroundcolor2);  
+}
 
+.defil {
+    display: flex;
+    flex-wrap: nowrap;
+    color: var(--backgroundcolor2);
+    overflow: hidden;    
+    border-top: dashed 2px var(--backgroundcolor2);;
+    border-bottom: dashed 2px var(--backgroundcolor2);
+    padding: 1rem;
+}
+
+.txtdefil {
+    white-space: nowrap;
+    animation: scrollTxt 10s linear infinite;
+    text-transform: uppercase;
+    font-weight: 700;
+    
+}
+
+@keyframes scrollTxt {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
 }
 
 .column1 {
@@ -192,3 +218,4 @@ h2 {
 .column1 h2:hover::before {
     width: 100%;
 }
+
