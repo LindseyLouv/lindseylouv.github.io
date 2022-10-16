@@ -219,3 +219,6 @@ h2 {
     width: 100%;
 }
 
+.barre {
+    text-decoration: line-through;
+}
