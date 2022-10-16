@@ -1,0 +1,121 @@
+/* ---- Variables de couleur pour thème ---- */
+:root{
+    --maincolor: #31473A;
+    --secondcolor: #7C8363;
+    --thirdcolor: #EDF4F2;
+    --backgroundcolor2: #004643;
+    --backgroundcolor: #abd1c6;
+    --textcolor: #f9bc60;
+}
+
+@keyframes fadeinandout {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+h1 {
+    color: var(--backgroundcolor2);
+    font-size: 3rem;
+    font-weight: 600;
+    animation: fadeinandout 2s ease-in-out infinite;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem;
+    
+}
+
+.wrapper {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    color: var(--backgroundcolor);
+    width: 800px;
+    height: 800px;
+    margin: auto;
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: var(--backgroundcolor2);
+    text-align: center;
+}
+
+.header {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: var(--backgroundcolor);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr) ;
+
+}
+
+.header__pic {
+    text-align: center;
+    margin: auto;
+    width: 90%;
+    border-radius: 50%;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.header__pic:hover {
+    /* scale taille par defaut à 1*/
+    transform: rotate(1turn);
+    transition: 3s;
+  }
+
+.header__title {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__text {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    color: var(--backgroundcolor2);
+
+}
+
+.column1 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background-color: var(--backgroundcolor);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    color: var(--backgroundcolor2);
+}
+
+.main1 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    background-color: var(--backgroundcolor2);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: solid 3px var(--backgroundcolor);
+}
+
+.main2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    background-color: var(--backgroundcolor2);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
