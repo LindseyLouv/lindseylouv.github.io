@@ -85,6 +85,7 @@ h2 {
     flex-direction: column;
     justify-content: space-evenly;
     color: var(--backgroundcolor2);  
+    overflow: hidden;
 }
 
 .defil {
